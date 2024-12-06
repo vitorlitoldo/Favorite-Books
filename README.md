@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+```markdown
+# Projeto de Biblioteca - Frontend e API Local
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto consiste em um sistema simples de cadastro de livros. Ele inclui um frontend React que interage com uma API local para adicionar, editar e visualizar livros.
 
-## Available Scripts
+## Tecnologias Utilizadas
 
-In the project directory, you can run:
+### Frontend:
+- **React**: Biblioteca JavaScript para construção da interface de usuário.
+- **Axios**: Para fazer as requisições HTTP à API local.
 
-### `npm start`
+### API Local:
+- **Express**: Framework Node.js para construir a API.
+- **JSON Server**: Utilizado para simular uma API RESTful com dados armazenados em um arquivo JSON.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Estrutura do Projeto
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend**: O frontend está desenvolvido em React, permitindo adicionar, editar e visualizar livros.
+- **API Local**: A API foi construída utilizando **Express** e **JSON Server**, que simula o banco de dados em um arquivo `db.json`.
 
-### `npm test`
+## Funcionalidades
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Adicionar livro**: Permite adicionar novos livros, incluindo título, autor e descrição.
+- **Editar livro**: Permite editar informações de livros já cadastrados.
+- **Visualizar livros**: Exibe a lista de livros cadastrados.
+- **API Local**: API RESTful que simula operações CRUD (Create, Read, Update, Delete) para livros.
 
-### `npm run build`
+## Como Iniciar o Projeto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para rodar o projeto localmente, você precisará executar tanto o servidor da API quanto o frontend React. Siga os passos abaixo:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. Configuração do Backend (API Local)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Acesse o diretório da API.
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+3. Inicie a API local:
+   ```bash
+   npm run api
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   A API estará rodando em `http://localhost:5000`. Ela usa o **JSON Server** para armazenar e simular um banco de dados em um arquivo `db.json`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2. Configuração do Frontend
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Acesse o diretório do frontend.
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Inicie o frontend React:
+   ```bash
+   npm start
+   ```
 
-## Learn More
+   O frontend estará disponível em `http://localhost:3000`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Como Funciona
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Frontend**: 
+   - A aplicação usa o React para capturar as entradas de dados do usuário, como título, autor e descrição do livro.
+   - Quando o formulário de adicionar um livro é enviado, uma requisição POST é feita para a API local.
+   - Quando o usuário edita um livro, uma requisição PUT é feita para atualizar os dados no arquivo JSON da API.
 
-### Code Splitting
+2. **API Local**:
+   - **GET /books**: Retorna todos os livros cadastrados.
+   - **POST /books**: Adiciona um novo livro.
+   - **PUT /books/:id**: Atualiza um livro existente.
+   - **DELETE /books/:id**: Remove um livro pelo seu ID.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Estrutura de Arquivos
 
-### Analyzing the Bundle Size
+- `frontend/` - Contém o código fonte do frontend React.
+- `api/` - Contém o código da API (Express + JSON Server).
+- `db.json` - Arquivo onde os livros são armazenados (simulando um banco de dados).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Observações
 
-### Making a Progressive Web App
+- A API local (JSON Server) é uma solução para simular um backend em desenvolvimento. Para ambientes de produção, você precisaria de um backend real com um banco de dados.
+- Certifique-se de rodar `npm run api` para garantir que a API esteja ativa antes de tentar interagir com o frontend.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contribuindo
 
-### Advanced Configuration
+1. Faça um fork deste repositório.
+2. Crie uma branch para sua alteração (`git checkout -b minha-branch`).
+3. Faça suas alterações.
+4. Envie as mudanças para o repositório (`git push origin minha-branch`).
+5. Abra um pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Licença
 
-### Deployment
+Este projeto é de código aberto e pode ser utilizado de acordo com a [Licença MIT](LICENSE).
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Detalhamento:
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **API Local**: Expliquei que a API é local, construída com **JSON Server**, e que os dados são armazenados em um arquivo `db.json`.
+- **Passos para execução**: Incluí as instruções sobre como iniciar tanto a API quanto o frontend. Os comandos `npm start` para o React e `npm run api` para o servidor local.
+- **Estrutura**: A seção de estrutura do projeto descreve a divisão entre o frontend e a API local, além de mencionar o arquivo `db.json` para armazenamento de dados.
