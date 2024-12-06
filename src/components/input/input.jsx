@@ -1,8 +1,8 @@
 import { StyledInput } from "./styles.js"
 
-const Input = ({ placeholder }) => {
+const Input = ({ placeholder, ...props }) => {
     return (
-        <StyledInput placeholder={placeholder} />
+        <StyledInput placeholder={placeholder} {...props} />
     )
 }
 

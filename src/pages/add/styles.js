@@ -29,10 +29,31 @@ export const Centralize = styled.div`
     padding: 20px;
 `
 
-export const Container = styled.div`
+export const Container = styled.form`
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+`
+
+export const StyledText = styled.textarea`
+    width: 90%;
+    height: 60px;
+    border: 1px solid #FFF;
+    border-radius: 10px;
+    background-color: #121212;
+    color: #FFF;
+    padding: 10px;
+
+    &::placeholder {
+        color: #b0b0b0;
+    }
+`
+
+export const StyledLabel = styled.label`
+    font-size: 16px;
+    color: #FFF; 
+    margin-bottom: 8px;
+    display: block; 
 `

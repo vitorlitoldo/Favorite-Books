@@ -42,7 +42,7 @@ const List = () => {
     }
 
     const handleEditPage = (id) => {
-        navigate(`edit/:${id}`)
+        navigate(`edit/${id}`)
     }
 
     const openModal = (bookId) => {
