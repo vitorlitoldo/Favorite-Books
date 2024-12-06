@@ -42,7 +42,7 @@ Para rodar o projeto localmente, você precisará executar tanto o servidor da A
    npm run api
    ```
 
-   A API estará rodando em `http://localhost:5000`. Ela usa o **JSON Server** para armazenar e simular um banco de dados em um arquivo `db.json`.
+   A API estará rodando em `http://localhost:8001/books`. Ela usa o **JSON Server** para armazenar e simular um banco de dados em um arquivo `db.json`.
 
 ### 2. Configuração do Frontend
 
@@ -94,10 +94,3 @@ Para rodar o projeto localmente, você precisará executar tanto o servidor da A
 ## Licença
 
 Este projeto é de código aberto e pode ser utilizado de acordo com a [Licença MIT](LICENSE).
-```
-
-### Detalhamento:
-
-- **API Local**: Expliquei que a API é local, construída com **JSON Server**, e que os dados são armazenados em um arquivo `db.json`.
-- **Passos para execução**: Incluí as instruções sobre como iniciar tanto a API quanto o frontend. Os comandos `npm start` para o React e `npm run api` para o servidor local.
-- **Estrutura**: A seção de estrutura do projeto descreve a divisão entre o frontend e a API local, além de mencionar o arquivo `db.json` para armazenamento de dados.
